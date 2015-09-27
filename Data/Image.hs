@@ -34,6 +34,8 @@ beside im1 im2 = Beside [im1, im2]
 
 besideAlign pos im1 im2 = BesideAlign pos [im1, im2]
 
--- The accumulated area of the image
-area :: Image -> Int
-area _ = 0
+width :: Image -> Int
+width _ = 0
+
+height :: Image -> Int
+height _ = 0

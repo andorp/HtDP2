@@ -28,7 +28,7 @@ sortImage = catamorphism $ Algebra insert
       | otherwise  = Cons b (Cons a x)
 
 larger :: Image -> Image -> Bool
-larger i1 i2 = True
+larger i1 i2 = (width i1 * height i1) > (width i2 * height i1)
 
 {-
 -- Ordered List
