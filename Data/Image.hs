@@ -24,6 +24,7 @@ data Image = Empty
            | Text String Size Color
 
            | Rotate Int Image
+           | Above [Image]
            | Beside [Image]
            | BesideAlign Relative [Image]
            | OverlayAlign Position Relative [Image]
