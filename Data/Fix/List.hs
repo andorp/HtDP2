@@ -36,8 +36,8 @@ lengthAlgebra :: Algebra (L a) Int
 lengthAlgebra = algebra 0 (const (+1))
 
 coAlgebra :: (b -> Maybe (a, b)) -> CoAlgebra (L a) b
-coAlgebra f = CoAlgebra initial where
-  initial = maybe Empty (uncurry Cons) . f
+coAlgebra f = CoAlgebra final where
+  final = maybe Empty (uncurry Cons) . f
 
 builder :: (b -> Maybe (a,b)) -> b -> List a
 builder construct = anamorphism $ coAlgebra construct
